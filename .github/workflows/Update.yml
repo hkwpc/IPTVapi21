@@ -3,7 +3,7 @@ name: Auto Update
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1,9,17 * * *'
+    - cron: '0 1,9 * * *'
   push:
     paths-ignore:
       - .github
@@ -21,8 +21,8 @@ jobs:
       matrix:
         include:
           - os: ubuntu-latest
-            branch: master
-            owner: kilvn
+            branch: bach
+            owner: hkwpc
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
